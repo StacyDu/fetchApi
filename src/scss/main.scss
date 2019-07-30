@@ -11,6 +11,35 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  color: #000000;
+  background: orange;;
+}
+
+.header {
+
+}
+
+.list {
+  display: block;
+  list-style-type: none;
+  &__item{
+    background: #f0f0f0;
+    padding: 16px;
+    margin: 8px;
+  }
+  &__link {
+    color: #000000;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+  }
+  &__link:hover {
+    color: navy;
+  }
+}
+
+@supports (display: grid) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
